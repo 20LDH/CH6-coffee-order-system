@@ -1,9 +1,6 @@
-package com.example.ch6coffeeordersystem.menu.service;
+package com.example.ch6coffeeordersystem.menu;
 
-import com.example.ch6coffeeordersystem.menu.dto.MenuResponse;
 import java.util.List;
-
-import com.example.ch6coffeeordersystem.menu.repository.MenuRepository;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
