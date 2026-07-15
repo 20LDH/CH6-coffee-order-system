@@ -1,8 +1,11 @@
-package com.example.ch6coffeeordersystem.menu;
+package com.example.ch6coffeeordersystem.menu.service;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.Mockito.when;
 
+import com.example.ch6coffeeordersystem.menu.dto.MenuResponse;
+import com.example.ch6coffeeordersystem.menu.entity.Menu;
+import com.example.ch6coffeeordersystem.menu.repository.MenuRepository;
 import java.util.List;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
