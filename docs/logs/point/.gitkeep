@@ -1,0 +1,3 @@
+이 디렉터리는 `point` 도메인 작업 로그가 쌓이는 위치다.
+형식/작성 규칙은 `docs/workflow/logs-guide.md`를 따른다.
+파일명 예: `001-point-charge.md`

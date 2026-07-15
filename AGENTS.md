@@ -52,22 +52,19 @@
 
 ---
 
-## 기본 컨벤션
+## 작업 모드
 
-### 패키지 구조
-도메인 단위로 나눈다. 계층별(controller, service 등) 하위 패키지로 다시 쪼개지 않는다.
+- 기본 모드: **사람과 협업**. Plan 단계는 사람의 명시적 승인 없이는 Generate로 넘어가지 않는다.
+- 완전 자율 모드로 전환하라는 별도 지시가 없는 한, 위 승인 절차를 항상 지킨다.
 
-```
-com.example.ch6coffeeordersystem
-├── common      (ApiResponse, 예외 처리 등 공통 요소)
-├── menu        (Menu, MenuController, MenuService, MenuRepository, MenuResponse)
-├── point       (포인트 관련 전부)
-└── order       (주문 관련 전부)
-```
+---
 
-### 코드 스타일
-- 생성자 주입 사용 (필드 주입 `@Autowired` 지양)
-- DTO는 `record` 사용
-- 조회 전용 서비스 메서드는 `@Transactional(readOnly = true)` 명시
-- Entity에는 setter를 만들지 않고, 필요한 변경은 의미 있는 메서드로 노출
-- 에러 응답은 공통 형식(`{status, message, data}` 또는 `{status, message, error}`)을 따른다
+## 컨텍스트 라우팅
+
+이 문서는 얇게 유지한다. 상세 규칙은 상황에 맞는 아래 문서를 그때 읽는다.
+
+| 상황 | 읽을 문서 |
+|---|---|
+| 코드 작성 규칙(패키지 구조, Entity/DTO/Repository/Service/Controller 작성 규칙, 네이밍, 공통 응답 형식)이 필요할 때 | `docs/convention.md` |
+| 특정 API의 요청/응답 필드, 에러 코드, 설계 메모가 필요할 때 | `docs/api/{도메인}-*.md` |
+| 작업 기록을 남기거나, 이전 시도(성공/실패) 이력을 확인할 때 | `docs/workflow/logs-guide.md` (규칙) + `docs/logs/{도메인}/*.md` (실제 기록) |
