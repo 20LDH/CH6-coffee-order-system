@@ -1,4 +1,4 @@
-package com.example.ch6coffeeordersystem.menu.common;
+package com.example.ch6coffeeordersystem.common;
 
 public class ApiResponse<T> {
 
