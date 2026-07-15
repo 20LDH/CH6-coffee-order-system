@@ -1,4 +1,4 @@
-package com.example.ch6coffeeordersystem.menu;
+package com.example.ch6coffeeordersystem.menu.dto;
 
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package com.example.ch6coffeeordersystem.menu;
+package com.example.ch6coffeeordersystem.menu.entity;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;

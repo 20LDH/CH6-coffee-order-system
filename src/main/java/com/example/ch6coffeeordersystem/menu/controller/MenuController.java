@@ -1,6 +1,8 @@
-package com.example.ch6coffeeordersystem.menu;
+package com.example.ch6coffeeordersystem.menu.controller;
 
 import com.example.ch6coffeeordersystem.common.ApiResponse;
+import com.example.ch6coffeeordersystem.menu.dto.MenuListResponse;
+import com.example.ch6coffeeordersystem.menu.service.MenuService;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;

@@ -1,4 +1,4 @@
-package com.example.ch6coffeeordersystem.menu;
+package com.example.ch6coffeeordersystem.menu.controller;
 
 import static org.hamcrest.Matchers.hasSize;
 import static org.mockito.Mockito.when;
@@ -6,6 +6,8 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
+import com.example.ch6coffeeordersystem.menu.dto.MenuResponse;
+import com.example.ch6coffeeordersystem.menu.service.MenuService;
 import java.util.List;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
