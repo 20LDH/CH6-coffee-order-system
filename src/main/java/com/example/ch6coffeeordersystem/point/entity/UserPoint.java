@@ -43,6 +43,19 @@ public class UserPoint {
         this.updatedAt = LocalDateTime.now();
     }
 
+    /**
+     * 주문/결제 시 포인트를 차감한다. 보유 포인트가 부족하면 차감하지 않고 예외를 던진다.
+     * 호출 전에 비관적 락({@code UserPointRepository.findByUserIdForUpdate})으로 조회한 상태여야
+     * 동시 주문 시 잔액이 음수가 되는 상황을 막을 수 있다.
+     */
+    public void deduct(int amount) {
+        if (this.balance < amount) {
+            throw new IllegalStateException("보유 포인트가 부족합니다.");
+        }
+        this.balance -= amount;
+        this.updatedAt = LocalDateTime.now();
+    }
+
     public Long getId() {
         return id;
     }
