@@ -43,6 +43,7 @@ public class GlobalExceptionHandler {
         return switch (fieldError.getField()) {
             case "userId" -> "INVALID_USER_ID";
             case "amount" -> "INVALID_AMOUNT";
+            case "menuId" -> "INVALID_MENU_ID";
             default -> "INVALID_REQUEST";
         };
     }

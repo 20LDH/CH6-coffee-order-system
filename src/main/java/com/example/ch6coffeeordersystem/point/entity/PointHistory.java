@@ -58,6 +58,10 @@ public class PointHistory {
         return new PointHistory(userId, PointHistoryType.CHARGE, amount, balanceAfter, null);
     }
 
+    public static PointHistory ofUse(String userId, int amount, int balanceAfter, Long orderId) {
+        return new PointHistory(userId, PointHistoryType.USE, amount, balanceAfter, orderId);
+    }
+
     public Long getId() {
         return id;
     }
